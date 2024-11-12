@@ -1,12 +1,14 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'; // Importando RouterModule para usar o <router-outlet>
 
 @Component({
   selector: 'app-root',
+  templateUrl: './app.component.html', // Apontando para o arquivo correto
+  styleUrls: ['./app.component.css'],
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [CommonModule, RouterModule], // Importando o RouterModule para habilitar <router-outlet>
 })
 export class AppComponent {
   title = 'loja-organicos';

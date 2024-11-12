@@ -1,6 +1,5 @@
-// produto.model.ts
+// src/app/produto.model.ts
 export interface Produto {
-  id: number;
   nome: string;
   preco: number;
   quantidade: number;

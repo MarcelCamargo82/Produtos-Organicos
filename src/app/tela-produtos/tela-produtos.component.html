@@ -1,8 +1,8 @@
-<!-- tela-produtos.component.html -->
+<!-- src/app/tela-produtos/tela-produtos.component.html -->
 <h2>Produtos Disponíveis</h2>
-<div *ngFor="let produto of produtos">
-  <h3>{{ produto.nome }}</h3>
-  <p>Preço: R$ {{ produto.preco | number : "1.2-2" }}</p>
-  <p>Quantidade em estoque: {{ produto.quantidade }}</p>
-  <button (click)="adicionarAoCarrinho(produto)">Adicionar ao Carrinho</button>
-</div>
+<ul>
+  <li *ngFor="let produto of produtos">
+    {{ produto.nome }} - R$ {{ produto.preco | number : "1.2-2" }} - Quantidade:
+    {{ produto.quantidade }}
+  </li>
+</ul>

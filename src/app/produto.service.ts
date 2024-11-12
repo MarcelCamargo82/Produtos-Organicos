@@ -1,18 +1,28 @@
-// produto.service.ts
+// src/app/produto.service.ts
 import { Injectable } from '@angular/core';
-import { Produto } from './produto.model';
+import { Produto } from './produto.model'; // Importa o modelo Produto
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root', // Disponível globalmente na aplicação
 })
 export class ProdutoService {
-  private produtos: Produto[] = [];
+  private produtos: Produto[] = []; // Armazena os produtos em estoque
 
+  // Método para adicionar um produto ao estoque
+  adicionarProduto(produto: Produto) {
+    this.produtos.push(produto);
+  }
+
+  // Método para obter todos os produtos
   getProdutos(): Produto[] {
     return this.produtos;
   }
 
-  adicionarProduto(produto: Produto): void {
-    this.produtos.push(produto);
+  // Método para atualizar o estoque de um produto
+  atualizarEstoque(produto: Produto) {
+    const index = this.produtos.findIndex((p) => p.nome === produto.nome);
+    if (index !== -1) {
+      this.produtos[index] = produto;
+    }
   }
 }
