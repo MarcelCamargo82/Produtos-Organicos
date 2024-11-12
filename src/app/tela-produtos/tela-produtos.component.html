@@ -1,0 +1,8 @@
+<!-- tela-produtos.component.html -->
+<h2>Produtos Disponíveis</h2>
+<div *ngFor="let produto of produtos">
+  <h3>{{ produto.nome }}</h3>
+  <p>Preço: R$ {{ produto.preco | number : "1.2-2" }}</p>
+  <p>Quantidade em estoque: {{ produto.quantidade }}</p>
+  <button (click)="adicionarAoCarrinho(produto)">Adicionar ao Carrinho</button>
+</div>
