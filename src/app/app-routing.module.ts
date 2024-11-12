@@ -6,7 +6,7 @@ import { TelaProdutosComponent } from './tela-produtos/tela-produtos.component';
 const routes: Routes = [
   { path: 'cadastro-produtos', component: TelaCadastroProdutosComponent },
   { path: 'produtos', component: TelaProdutosComponent },
-  { path: '', redirectTo: '/produtos', pathMatch: 'full' },
+  { path: '', redirectTo: '/produtos', pathMatch: 'full' }, // Redireciona para a lista de produtos
 ];
 
 @NgModule({

@@ -1,6 +1,5 @@
-<!-- src/app/app.component.html -->
-<div>
-  <h1>{{ title }}</h1>
-  <router-outlet></router-outlet>
-  <!-- O <router-outlet> é onde os componentes de rota serão exibidos -->
-</div>
+<nav>
+  <a routerLink="/cadastro-produtos">Cadastrar Produto</a> |
+  <a routerLink="/produtos">Lista de Produtos</a>
+</nav>
+<router-outlet></router-outlet>

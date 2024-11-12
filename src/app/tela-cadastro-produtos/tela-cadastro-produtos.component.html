@@ -1,32 +1,28 @@
-<!-- src/app/tela-cadastro-produtos/tela-cadastro-produtos.component.html -->
-<form (ngSubmit)="cadastrarProduto()">
-  <label for="nome">Nome do Produto:</label>
-  <input id="nome" [(ngModel)]="novoProduto.nome" name="nome" required />
+<div>
+  <h2>Cadastro de Produtos</h2>
+  <form (ngSubmit)="cadastrarProduto()">
+    <label for="nome">Nome:</label>
+    <input id="nome" [(ngModel)]="novoProduto.nome" name="nome" required />
 
-  <label for="preco">Preço:</label>
-  <input
-    id="preco"
-    [(ngModel)]="novoProduto.preco"
-    name="preco"
-    required
-    type="number"
-  />
+    <label for="preco">Preço:</label>
+    <input id="preco" [(ngModel)]="novoProduto.preco" name="preco" required />
 
-  <label for="quantidade">Quantidade:</label>
-  <input
-    id="quantidade"
-    [(ngModel)]="novoProduto.quantidade"
-    name="quantidade"
-    required
-    type="number"
-  />
+    <label for="quantidade">Quantidade:</label>
+    <input
+      id="quantidade"
+      [(ngModel)]="novoProduto.quantidade"
+      name="quantidade"
+      required
+    />
 
-  <button type="submit">Cadastrar Produto</button>
-</form>
+    <button type="submit">Cadastrar</button>
+  </form>
 
-<ul>
-  <li *ngFor="let produto of produtos">
-    {{ produto.nome }} - R$ {{ produto.preco | number : "1.2-2" }} - Quantidade:
-    {{ produto.quantidade }}
-  </li>
-</ul>
+  <h3>Lista de Produtos</h3>
+  <ul>
+    <li *ngFor="let produto of produtos">
+      {{ produto.nome }} - R$ {{ produto.preco | number : "1.2-2" }} -
+      Quantidade: {{ produto.quantidade }}
+    </li>
+  </ul>
+</div>

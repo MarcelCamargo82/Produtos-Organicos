@@ -1,8 +1,10 @@
-<!-- src/app/tela-produtos/tela-produtos.component.html -->
-<h2>Produtos Disponíveis</h2>
-<ul>
-  <li *ngFor="let produto of produtos">
-    {{ produto.nome }} - R$ {{ produto.preco | number : "1.2-2" }} - Quantidade:
-    {{ produto.quantidade }}
-  </li>
-</ul>
+<div>
+  <h2>Lista de Produtos</h2>
+  <ul>
+    <li *ngFor="let produto of produtos">
+      <p>Nome: {{ produto.nome }}</p>
+      <p>Preço: R$ {{ produto.preco | number : "1.2-2" }}</p>
+      <p>Quantidade: {{ produto.quantidade }}</p>
+    </li>
+  </ul>
+</div>
